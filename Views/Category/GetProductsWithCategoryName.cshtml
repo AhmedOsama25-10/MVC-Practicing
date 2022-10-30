@@ -1,0 +1,68 @@
+﻿@using Mobi__Shop.Models
+
+@model List<ProductViewModel>
+
+@{
+    ViewData["Title"] = "GetProductsByBrand";
+}
+
+
+<div class="container">
+    <h4>All Product in This Category</h4>
+    <hr />
+    @foreach (var pro in Model)
+    {
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => pro.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => pro.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => pro.Price)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => pro.Price)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => pro.Stock)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => pro.Stock)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => pro.ProductionYear)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => pro.ProductionYear)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => pro.BrandName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => pro.BrandName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => pro.CategotyID)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => pro.CategotyID)
+            </dd>
+            <dt class="col-sm-2">
+                Image
+            </dt>
+            <dd class="col-sm-10">
+                <img src="~/images/@pro.ImgPath" width="200px" />
+
+            </dd>
+        </dl>
+        <hr />
+
+    }
+
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

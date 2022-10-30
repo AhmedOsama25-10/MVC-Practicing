@@ -1,0 +1,28 @@
+﻿@using Mobi__Shop.Models 
+@model List<CategoryViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+
+    <h1>All Categories</h1>
+
+    <hr />
+    @foreach (var Cat in Model)
+    {
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => Cat.Name)
+            </dt>
+            <dd class="col-sm-10">
+                <a asp-action="GetProductsWithCategoryName" asp-controller="Category" asp-route-Name="@Cat.Name">@Cat.Name</a>
+            </dd>
+        </dl>
+    }
+
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

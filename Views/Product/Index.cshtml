@@ -1,0 +1,58 @@
+﻿
+@using Mobi__Shop.Models
+@model List<Product>
+@{ Layout = "_Layout2";
+
+   }
+<div class="CardContainer">
+    @foreach (var item in Model)
+    {
+        <div class="pCard">
+            <div class="cardImg"> <img src="~/images/@item.Image"  /> </div>
+            <div> ID: @item.ID</div>
+            <div> Name: @item.Name</div>
+            <div> BrandName: item.BrandName</div>
+            <div> Stock: @item.Stock</div>
+            <div> ProductionYear: @item.ProductionYear</div>
+            <div> Price: @item.Price</div>
+            <div class="actions">
+                <div>
+                    <a asp-action="AddingProductToShopingCart" asp-controller="Product" asp-route-id="@item.ID"> Buy</a>
+
+                </div>
+                <div>
+                    <a asp-action="GetProductById" asp-controller="Product" asp-route-id="@item.ID"> Details</a>
+
+                </div>
+            </div>
+            
+        </div>
+    }
+    </div>
+
+@*<table>
+    <tr>
+        <th> ID</th>
+        <th> Name</th>
+        <th> BrandName</th>
+        <th> Stock</th>
+        <th> Image</th>
+        <th> ProductionYear</th>
+        <th> Price</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.ID</td>
+    <td>@item.Name</td>
+    <td>@item.BrandName</td>
+    <td>@item.Stock</td>
+    <td> <img src="~/images/@item.Image" style="width:40px" /></td>
+    <td>@item.ProductionYear</td>
+    <td>@item.Price</td>
+</tr>
+
+
+    }
+
+</table>*@

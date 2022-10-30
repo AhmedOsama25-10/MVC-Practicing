@@ -1,0 +1,228 @@
+﻿<div class="container">
+    <div class="Pcontainer">
+        <h3> Product Controlling</h3>
+        <a asp-action="Add" asp-controller="Product">
+            <div class="Add">
+
+                Add  Product
+            </div>
+
+        </a>
+        <a id="Edit"  asp-action="EditProduct" asp-controller="Product" asp-route-id=""  >
+            <div   class="Edit">
+
+
+                Edit Product
+
+            </div>
+        </a>
+        <a  id="Delete" asp-action="DeleteProduct" asp-controller="Product">
+            <div class="Delete">
+
+
+                Delete Product
+            </div>
+
+
+        </a>
+    </div>
+    <div class="Pcontainer">
+        <h3> Category Controlling</h3>
+        <a  asp-action="Add" asp-controller="Category">
+            <div class="Add">
+
+                Add  Category
+            </div>
+
+        </a>
+        <a id="EditC"  asp-action="Update" asp-controller="Category">
+            <div class="Edit">
+
+
+                Edit Category
+
+            </div>
+        </a>
+        <a  id="DeleteC" asp-action="DeleteById" asp-controller="Category">
+            <div class="Delete">
+
+
+                Delete Category
+            </div>
+
+
+        </a>
+    </div>
+    <div class="Pcontainer">
+        <h3> Role Controlling</h3>
+        <a asp-action="AddRole" asp-controller="Role">
+            <div class="Add">
+
+                Add  Role
+            </div>
+
+        </a>
+        <a asp-action="AssigningRoleToUser" asp-controller="Role">
+            <div class="Assigning">
+
+                Assign Role To User
+
+            </div>
+
+        </a>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script>
+            $(function () {
+
+                //fun = () => {
+
+
+
+                $("#Edit").click(function (event) {
+                    var x = prompt("Please Enter The ID You Want to Edit");
+
+
+                    if (x != null) {
+
+                        var MyID = parseInt(x);
+                        if ((x % 1) === 0) {
+
+                            var newhref = $("#Edit").attr("href") + '/' + MyID;
+                            $("#Edit").attr("href", newhref);
+                            return 0;
+                        } else {
+                            alert("ID Must Be Int");
+                            event.preventDefault();
+                        }
+
+                    } else {
+                        event.preventDefault();
+                    }
+                })
+
+                $("#Delete").click(function (event) {
+                    var x = prompt("Please Enter The ID You Want to Delete");
+
+
+                    if (x != null) {
+
+                        var MyID = parseInt(x);
+                        if ((x % 1) === 0) {
+
+                            var newhref = $("#Delete").attr("href") + '/' + MyID;
+                            $("#Delete").attr("href", newhref);
+                            return 0;
+                        } else {
+                            alert("ID Must Be Int");
+                            event.preventDefault();
+                        }
+
+                    } else {
+                        event.preventDefault();
+                    }
+                })
+
+                $("#EditC").click(function (event) {
+                    var x = prompt("Please Enter The ID You Want to Edit");
+
+
+                    if (x != null) {
+
+                        var MyID = parseInt(x);
+                        if ((x % 1) === 0) {
+
+                            var newhref = $("#EditC").attr("href") + '/' + MyID;
+                            $("#EditC").attr("href", newhref);
+                            return 0;
+                        } else {
+                            alert("ID Must Be Int");
+                            event.preventDefault();
+                        }
+
+                    } else {
+                        event.preventDefault();
+                    }
+                })
+
+                $("#DeleteC").click(function (event) {
+                    var x = prompt("Please Enter The ID You Want to Delete");
+
+
+                    if (x != null) {
+
+                        var MyID = parseInt(x);
+                        if ((x % 1) === 0) {
+
+                            var newhref = $("#DeleteC").attr("href") + '/' + MyID;
+                            $("#DeleteC").attr("href", newhref);
+                            return 0;
+                        } else {
+                            alert("ID Must Be Int");
+                            event.preventDefault();
+                        }
+
+                    } else {
+                        event.preventDefault();
+                    }
+                })
+
+
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+                    //function myfunction(e) {
+                    //    if (x != null) {
+                    //        try {
+                    //            var MyID = parseInt(x);
+                    //            var newhref = $("#Edit").attr("href")+'/' + MyID;
+                    //            $("#Edit").attr("href", newhref);
+                    //            return 0;
+
+                    //        } catch (e) {
+                    //            alert(e)
+                    //        }
+                    //    }
+
+                    //}
+                    //myfunction();
+                        
+
+                    //var x = EditingNum.onclick(() => {
+                    //    console.log("hiii")
+                    //    var ID = prompt("Insert The ID You Want To Edit");
+                    //    try {
+                    //        ID = parseInt(ID);
+                    //        return ID;
+
+                    //    } catch (e) {
+                    //        alert("ID Must Be Int");
+                    //    }
+                    //})
+                    //EditingNum.setAttribute(" asp-route-id", `${x}`)
+                //}
+           // })
+            
+            
+            
+        </script>
+    }
+}

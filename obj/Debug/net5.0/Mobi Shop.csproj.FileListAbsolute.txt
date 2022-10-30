@@ -1,0 +1,27 @@
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.csproj.AssemblyReference.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.GeneratedMSBuildEditorConfig.editorconfig
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.AssemblyInfoInputs.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.AssemblyInfo.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.csproj.CoreCompileInputs.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.MvcApplicationPartsAssemblyInfo.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.RazorAssemblyInfo.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.RazorAssemblyInfo.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\staticwebassets\Mobi Shop.StaticWebAssets.Manifest.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\staticwebassets\Mobi Shop.StaticWebAssets.xml
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\scopedcss\bundle\Mobi Shop.styles.css
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.TagHelpers.input.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.TagHelpers.output.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.RazorCoreGenerate.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.RazorTargetAssemblyInfo.cache
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.RazorTargetAssemblyInfo.cs
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.dll
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\ref\Mobi Shop.dll
+E:\Mobi Shop\WebApplication1\obj\Debug\net5.0\Mobi Shop.pdb

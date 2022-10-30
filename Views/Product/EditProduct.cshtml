@@ -1,0 +1,72 @@
+﻿@model Mobi__Shop.Models.ProductViewModel
+
+@{
+    ViewData["Title"] = "EditProduct";
+}
+<div class="container">
+
+    <h1>Edit Product</h1>
+
+    <h4>Editing Product : @Model.Name</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="EditProduct">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Stock" class="control-label"></label>
+                    <input asp-for="Stock" class="form-control" />
+                    <span asp-validation-for="Stock" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ProductionYear" class="control-label"></label>
+                    <input asp-for="ProductionYear" class="form-control" />
+                    <span asp-validation-for="ProductionYear" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BrandName" class="control-label"></label>
+                    <input asp-for="BrandName" class="form-control" />
+                    <span asp-validation-for="BrandName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CategotyID" class="control-label"></label>
+                    <input asp-for="CategotyID" class="form-control" />
+                    <span asp-validation-for="CategotyID" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+            $('.custom-file-input').on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).next('.custom-file-label').html(fileName);
+            })
+        })
+
+    </script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,47 @@
+﻿@model Mobi__Shop.Models.CategoryViewModel
+
+@{
+    ViewData["Title"] = "Add";
+}
+<div class="RegContainer">
+    <h1>Add New Category</h1>
+    <hr />
+    <div class="InputsParent">
+        <div class="">
+            <form asp-action="Add">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+    </div>
+
+</div>
+<a asp-action="Index">Back to List</a>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script>
+    $(function () {
+
+
+
+
+
+        $(".InputsParent").fadeIn(2000);
+
+
+    })
+</script>
+}

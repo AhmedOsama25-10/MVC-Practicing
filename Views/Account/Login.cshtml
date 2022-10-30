@@ -1,0 +1,65 @@
+﻿@model Mobi_Shop.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout2";
+}
+@if (User.Identity.IsAuthenticated == false)
+{
+    <div class="RegContainer">
+        <h1>Login</h1>
+
+        <h4>Please inerst your Username & Password</h4>
+        <hr />
+        <div class="row">
+            <div class="InputsParent">
+                <form asp-action="Login">
+                    <div class="">
+                        <label asp-for="UserName" class="">Username</label>
+                        <input asp-for="UserName" class="" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <input type="hidden" name="ReturnUrl" value="@ViewBag.RedirectionUrl" />
+
+                    <div class="">
+                        <label asp-for="Password" class=""></label>
+                        <input asp-for="Password" class="" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="KeepMeLogin" /> @Html.DisplayNameFor(model => model.KeepMeLogin)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <h4> You Already logged in</h4>
+}
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script>
+            $(function () {
+
+
+
+
+
+                $(".InputsParent").fadeIn(2000);
+
+
+            })
+        </script>
+    }
+}

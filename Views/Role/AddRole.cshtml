@@ -1,0 +1,41 @@
+﻿@model Mobi__Shop.Models.RoleViewModel
+
+@{
+    ViewData["Title"] = "AddRole";
+}
+<div class="RegContainer">
+
+    <h1>Add New Role</h1>
+
+    <hr />
+    <div class="">
+        <div class="InputsParent">
+            <form asp-action="AddRole">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="RoleName" class="control-label"></label>
+                    <input asp-for="RoleName" class="form-control" />
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script>
+    $(function () {
+        $(".InputsParent").fadeIn(2000);
+
+    })
+</script>
+}

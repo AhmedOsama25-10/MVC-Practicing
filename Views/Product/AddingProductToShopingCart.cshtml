@@ -1,0 +1,57 @@
+﻿@using Mobi__Shop.Models
+@model ProductViewModel
+@{ 
+    Layout = "_Layout2";
+}
+@*<form  asp-controller="Cart"  asp-action="Index" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+
+
+</form>*@
+<div class="CardContainer">
+
+        <div class="pCard">
+            <div class="cardImg"> <img src="~/images/@Model.ImgPath" /> </div>
+            <div> Name: @Model.Name</div>
+            <div> BrandName: Model.BrandName</div>
+            <div> Stock: @Model.Stock</div>
+            <div> ProductionYear: @Model.ProductionYear</div>
+            <div> Price: @Model.Price</div>
+            <div class="actions">
+                <div>
+                    <a asp-action="Index" asp-controller="Cart" 
+                       asp-route-Name="@Model.Name"
+                       asp-route-Price="@Model.Price"
+                       asp-route-Image="@Model.Image"
+                       asp-route-UserName="@User.Identity.Name"
+                       asp-route-Stock="@Model.Stock"
+
+
+
+                       
+                       
+                       >Add</a>
+
+                </div>
+                <div>
+                    <a asp-action="Index" asp-controller="Product">Back</a>
+                </div>
+            </div>
+
+        </div>
+    
+</div>
+
